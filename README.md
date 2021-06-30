@@ -4,21 +4,24 @@ Feed a list of Spotify Playlist URIs to the program. The program accesses these 
 
 Sections of Code:
 
-Spotify API Authorization: Code to access Spotify API. Note: I referred to this site to assist with formatting this section: https://stmorse.github.io/journal/spotify-api.html
+1. Spotify API Authorization: Code to access Spotify API. Note: I referred to this site to assist with formatting this section: https://stmorse.github.io/journal/spotify-api.html
 
-Lists of Playlist URIs: 2 lists.
+2. Lists of Playlist URIs: 2 lists.
         ccm_playlists: Short list for testing code quickly.
         spotify_ccm_playlists: Long list as data source. Takes a few minutes to run.
 
-Functions: Six functions.
+3. Functions: Six functions.
+
     First five functions used to gather data.
+    
     Final function is the only one to run. It initiates previous functions as needed.
-        "Playlist_getter": takes URI list. Returns “playlist API” endpoint links.
-        "Playlist_info": Takes links above and gathers data about each playlist
-        "Artist_info": Takes links above and gathers data about every song in each playlist
-        "Label_getter": Takes Album URI from “Artist_info” function above, accesses “album API” endpoint to retrieve “record label” for every song in each playlist.
-        "Artist_followers_getter": Takes Artist URI from “Artist_info” function, accesses “artist API” endpoint to retrieve “Total Followers” for every artist of every song
-        "Artist_album_df": Initiates all functions above, gathers all data, formats into a dataframe, appends to csv file each time the program runs.
+    
+        1. "Playlist_getter": takes URI list. Returns “playlist API” endpoint links.
+        2. "Playlist_info": Takes links above and gathers data about each playlist
+        3. "Artist_info": Takes links above and gathers data about every song in each playlist
+        4. "Label_getter": Takes Album URI from “Artist_info” function above, accesses “album API” endpoint to retrieve “record label” for every song in each playlist.
+        5. "Artist_followers_getter": Takes Artist URI from “Artist_info” function, accesses “artist API” endpoint to retrieve “Total Followers” for every artist of every song
+        6. "Artist_album_df": Initiates all functions above, gathers all data, formats into a dataframe, appends to csv file each time the program runs.
 
 Methodology:
 
