@@ -3,17 +3,14 @@ Concept:
 Feed a list of Spotify Playlist URIs to the program. The program accesses these playlists, retrieves data, formats it into a dataframe, and stores it as a csv file. This csv file can then be used as the source for data visualizations in Google Data Studio (PowerBI, Excel, Tableau, Domo, etc) for reports and dashboards. Running the program daily appends the newest data to the bottom of the csv and gives ability to monitor trends over time.
 
 Sections of Code:
+Spotify API Authorization: Code to access Spotify API. Note: I referred to this site to assist with formatting this section: https://stmorse.github.io/journal/spotify-api.html
 
-    Spotify API Authorization: Code to access Spotify API. Note: I referred to this site to assist with formatting this section: https://stmorse.github.io/journal/spotify-api.html
-
-    Lists of Playlist URIs: 2 lists.
+Lists of Playlist URIs: 2 lists.
         ccm_playlists: Short list for testing code quickly.
         spotify_ccm_playlists: Long list as data source. Takes a few minutes to run.
 
-    Functions: Six functions.
-
+Functions: Six functions.
     First five functions used to gather data.
-
     Final function is the only one to run. It initiates previous functions as needed.
         "Playlist_getter": takes URI list. Returns “playlist API” endpoint links.
         "Playlist_info": Takes links above and gathers data about each playlist
