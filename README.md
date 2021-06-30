@@ -30,10 +30,8 @@ Approach is to iterate through each song in every playlist and append desired da
 These lists are then “zipped” together into a new list of “tuples” for each song. Order is retained, so this groups the different data points together by song (e.g. artist name, label, followers, etc). These tuples become the input used by the final function.
 The final function is the only one to “print.” It initiates the other functions, accesses the tuples, and formats them into dataframes. Its last step is to merge these dataframes into a single, larger dataframe and save it to a csv file.
 
-LINKS:
-
-Code as a text file: https://github.gatech.edu/pages/dgartley3/data_retriever/Spotify_Playlist_Data_Retriever_Example.txt
-
-Code as a Python file: https://github.gatech.edu/pages/dgartley3/data_retriever/Playlist_Data_Retriever
-
-Example CSV: https://github.gatech.edu/pages/dgartley3/data_retriever/Spotify_Playlist_Data_by_Label_v2.csv
+Files:
+README
+Code as a text file
+Code as a Python file
+Example CSV
